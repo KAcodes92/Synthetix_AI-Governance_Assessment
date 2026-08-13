@@ -40,6 +40,41 @@ Built by **Kartikeya Awasthi** · © 2026
   reads from `app/`, so those were dead weight (and confusing to open). This
   version keeps only the working `app/` tree.
 
+## Enterprise design pass
+
+A second pass reworked typography, layout, and the report structure to read
+like a genuine diagnostic instrument rather than a marketing quiz:
+
+- **Typography** — dropped Orbitron (the "sci-fi readout" font on every
+  score/dollar figure) and the Space Grotesk / Urbanist pairing, replaced
+  with **Inter + Inter Tight** throughout, with `tabular-nums` on all
+  numeric output. This matches the type system already used in the
+  Northbridge savings estimator, so the two tools now share one brand voice.
+- **Color tokens** — replaced the neon royal-blue/cyan/glow palette with the
+  same navy-deep / blue-steel / blue-bright system as the calculator.
+  Severity colors (high/mid/low) were re-tuned to muted GRC-tool red/amber/green
+  instead of saturated alert colors.
+- **Landing page** — the glowing radial-gradient hero-in-a-card is now a flat
+  navy gradient band (no glow), followed by an explicit **"How this works"**
+  three-step strip before the track selector — most enterprise assessment
+  tools tell you the process and time commitment before asking you to start.
+- **Assessment flow** — "Scenario" is now "Question" throughout, and each
+  question header shows its **control-area category** (e.g. "Regulatory
+  Penalty Risk") alongside the question count, so the person always knows
+  which governance domain they're answering for — not just a bare X of 5.
+- **Report** — restructured to read like an actual executive report:
+  - Labeled **"Executive Summary"** with a generated **reference ID and date**
+    (`NB-GRC-20260813-XXXX`), the kind of provenance a real compliance
+    deliverable carries.
+  - Score panel now states **"Overall Risk Rating: [posture]"** explicitly
+    rather than just showing a label.
+  - Findings section renamed **"Key findings & recommended controls"**;
+    severity tags renamed **"High priority" / "Moderate priority"** instead
+    of quiz-style "High risk" (that language is kept only on the quiz
+    options themselves, where it's rating a scenario, not a finding).
+  - CTA reframed from "request a demo" to **"discuss these findings with a
+    specialist"** — consultative, not promotional.
+
 ## Form submissions
 
 The "Request my demo" form relays to `awasthikartikeya92@gmail.com` via
